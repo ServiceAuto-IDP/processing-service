@@ -36,4 +36,4 @@ jobs:
       - name: Trigger Portainer webhook
         shell: powershell
         run: |
-          Invoke-WebRequest -Method POST -Uri "${{ secrets.PORTAINER_WEBHOOK_URL }}"
+          curl.exe -X POST "${{ secrets.PORTAINER_WEBHOOK_URL }}"
